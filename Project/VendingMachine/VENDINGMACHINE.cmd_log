@@ -1,0 +1,56 @@
+xst -intstyle ise -ifn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.xst" -ofn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "VENDINGMACHINE.ngc" VENDINGMACHINE.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o VENDINGMACHINE_map.ncd VENDINGMACHINE.ngd VENDINGMACHINE.pcf 
+par -w -intstyle ise -ol high -t 1 VENDINGMACHINE_map.ncd VENDINGMACHINE.ncd VENDINGMACHINE.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml VENDINGMACHINE.twx VENDINGMACHINE.ncd -o VENDINGMACHINE.twr VENDINGMACHINE.pcf 
+xst -intstyle ise -ifn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.xst" -ofn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "VENDINGMACHINE.ngc" VENDINGMACHINE.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o VENDINGMACHINE_map.ncd VENDINGMACHINE.ngd VENDINGMACHINE.pcf 
+par -w -intstyle ise -ol high -t 1 VENDINGMACHINE_map.ncd VENDINGMACHINE.ncd VENDINGMACHINE.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml VENDINGMACHINE.twx VENDINGMACHINE.ncd -o VENDINGMACHINE.twr VENDINGMACHINE.pcf 
+xst -intstyle ise -ifn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.xst" -ofn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "VENDINGMACHINE.ngc" VENDINGMACHINE.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o VENDINGMACHINE_map.ncd VENDINGMACHINE.ngd VENDINGMACHINE.pcf 
+par -w -intstyle ise -ol high -t 1 VENDINGMACHINE_map.ncd VENDINGMACHINE.ncd VENDINGMACHINE.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml VENDINGMACHINE.twx VENDINGMACHINE.ncd -o VENDINGMACHINE.twr VENDINGMACHINE.pcf 
+xst -intstyle ise -ifn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.xst" -ofn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "VENDINGMACHINE.ngc" VENDINGMACHINE.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o VENDINGMACHINE_map.ncd VENDINGMACHINE.ngd VENDINGMACHINE.pcf 
+par -w -intstyle ise -ol high -t 1 VENDINGMACHINE_map.ncd VENDINGMACHINE.ncd VENDINGMACHINE.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml VENDINGMACHINE.twx VENDINGMACHINE.ncd -o VENDINGMACHINE.twr VENDINGMACHINE.pcf 
+xst -intstyle ise -ifn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.xst" -ofn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.syr" 
+xst -intstyle ise -ifn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.xst" -ofn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.syr" 
+xst -intstyle ise -ifn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.xst" -ofn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "VENDINGMACHINE.ngc" VENDINGMACHINE.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o VENDINGMACHINE_map.ncd VENDINGMACHINE.ngd VENDINGMACHINE.pcf 
+par -w -intstyle ise -ol high -t 1 VENDINGMACHINE_map.ncd VENDINGMACHINE.ncd VENDINGMACHINE.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml VENDINGMACHINE.twx VENDINGMACHINE.ncd -o VENDINGMACHINE.twr VENDINGMACHINE.pcf 
+xst -intstyle ise -ifn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.xst" -ofn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.syr" 
+xst -intstyle ise -ifn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.xst" -ofn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "VENDINGMACHINE.ngc" VENDINGMACHINE.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o VENDINGMACHINE_map.ncd VENDINGMACHINE.ngd VENDINGMACHINE.pcf 
+par -w -intstyle ise -ol high -t 1 VENDINGMACHINE_map.ncd VENDINGMACHINE.ncd VENDINGMACHINE.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml VENDINGMACHINE.twx VENDINGMACHINE.ncd -o VENDINGMACHINE.twr VENDINGMACHINE.pcf 
+xst -intstyle ise -ifn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.xst" -ofn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "VENDINGMACHINE.ngc" VENDINGMACHINE.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o VENDINGMACHINE_map.ncd VENDINGMACHINE.ngd VENDINGMACHINE.pcf 
+par -w -intstyle ise -ol high -t 1 VENDINGMACHINE_map.ncd VENDINGMACHINE.ncd VENDINGMACHINE.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml VENDINGMACHINE.twx VENDINGMACHINE.ncd -o VENDINGMACHINE.twr VENDINGMACHINE.pcf 
+xst -intstyle ise -ifn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.xst" -ofn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.syr" 
+xst -intstyle ise -ifn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.xst" -ofn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.syr" 
+xst -intstyle ise -ifn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.xst" -ofn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.syr" 
+xst -intstyle ise -ifn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.xst" -ofn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.syr" 
+xst -intstyle ise -ifn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.xst" -ofn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.syr" 
+xst -intstyle ise -ifn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.xst" -ofn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.syr" 
+xst -intstyle ise -ifn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.xst" -ofn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.syr" 
+xst -intstyle ise -ifn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.xst" -ofn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.syr" 
+xst -intstyle ise -ifn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.xst" -ofn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "VENDINGMACHINE.ngc" VENDINGMACHINE.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o VENDINGMACHINE_map.ncd VENDINGMACHINE.ngd VENDINGMACHINE.pcf 
+par -w -intstyle ise -ol high -t 1 VENDINGMACHINE_map.ncd VENDINGMACHINE.ncd VENDINGMACHINE.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml VENDINGMACHINE.twx VENDINGMACHINE.ncd -o VENDINGMACHINE.twr VENDINGMACHINE.pcf 
+xst -intstyle ise -ifn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.xst" -ofn "D:/ISE Projects/VendingMachine/VENDINGMACHINE.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "VENDINGMACHINE.ngc" VENDINGMACHINE.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o VENDINGMACHINE_map.ncd VENDINGMACHINE.ngd VENDINGMACHINE.pcf 
+par -w -intstyle ise -ol high -t 1 VENDINGMACHINE_map.ncd VENDINGMACHINE.ncd VENDINGMACHINE.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml VENDINGMACHINE.twx VENDINGMACHINE.ncd -o VENDINGMACHINE.twr VENDINGMACHINE.pcf 

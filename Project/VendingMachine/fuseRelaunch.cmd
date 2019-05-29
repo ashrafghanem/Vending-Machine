@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/ISE Projects/VendingMachine/VENDINGMACHINETB_isim_beh.exe" -prj "D:/ISE Projects/VendingMachine/VENDINGMACHINETB_beh.prj" "work.VENDINGMACHINETB" 

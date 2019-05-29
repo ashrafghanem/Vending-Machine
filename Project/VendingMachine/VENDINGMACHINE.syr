@@ -1,0 +1,417 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: VENDINGMACHINE.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "VENDINGMACHINE.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "VENDINGMACHINE"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : VENDINGMACHINE
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/ISE Projects/VendingMachine/VendingMachine.vhd" in Library work.
+Entity <vendingmachine> compiled.
+Entity <vendingmachine> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <VENDINGMACHINE> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <VENDINGMACHINE> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "D:/ISE Projects/VendingMachine/VendingMachine.vhd" line 87: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <SUM>, <PRICE>
+Entity <VENDINGMACHINE> analyzed. Unit <VENDINGMACHINE> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <VENDINGMACHINE>.
+    Related source file is "D:/ISE Projects/VendingMachine/VendingMachine.vhd".
+    Found finite state machine <FSM_0> for signal <CURR_STATE>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 3                                              |
+    | Clock              | CLOCK                     (rising_edge)        |
+    | Reset              | RESET                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | s0                                             |
+    | Power Up State     | s0                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit register for signal <R>.
+    Found 2-bit register for signal <PRODUCT>.
+    Found 4-bit comparator less for signal <CURR_STATE$cmp_lt0000> created at line 107.
+    Found 3-bit register for signal <PRICE>.
+    Found 5-bit subtractor for signal <R$addsub0000> created at line 78.
+    Found 4-bit register for signal <SUM>.
+    Found 4-bit adder for signal <SUM$share0000> created at line 67.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <VENDINGMACHINE> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 1
+ 5-bit subtractor                                      : 1
+# Registers                                            : 5
+ 1-bit register                                        : 2
+ 3-bit register                                        : 2
+ 4-bit register                                        : 1
+# Comparators                                          : 1
+ 4-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <CURR_STATE/FSM> on signal <CURR_STATE[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ s0    | 00
+ s1    | 01
+ s2    | 11
+ s3    | 10
+-------------------
+WARNING:Xst:1710 - FF/Latch <R_2> (without init value) has a constant value of 0 in block <VENDINGMACHINE>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 1
+ 5-bit subtractor                                      : 1
+# Registers                                            : 12
+ Flip-Flops                                            : 12
+# Comparators                                          : 1
+ 4-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <R_2> (without init value) has a constant value of 0 in block <VENDINGMACHINE>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <VENDINGMACHINE> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block VENDINGMACHINE, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 13
+ Flip-Flops                                            : 13
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : VENDINGMACHINE.ngr
+Top Level Output File Name         : VENDINGMACHINE
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 13
+
+Cell Usage :
+# BELS                             : 49
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 6
+#      LUT3                        : 5
+#      LUT3_D                      : 1
+#      LUT3_L                      : 3
+#      LUT4                        : 23
+#      LUT4_D                      : 3
+#      LUT4_L                      : 5
+#      MUXF5                       : 1
+# FlipFlops/Latches                : 13
+#      FDC                         : 2
+#      FDE                         : 11
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 7
+#      OBUF                        : 5
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       24  out of   4656     0%  
+ Number of Slice Flip Flops:             13  out of   9312     0%  
+ Number of 4 input LUTs:                 47  out of   9312     0%  
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    232     5%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLOCK                              | BUFGP                  | 13    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+RESET                              | IBUF                   | 2     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 5.628ns (Maximum Frequency: 177.683MHz)
+   Minimum input arrival time before clock: 7.169ns
+   Maximum output required time after clock: 4.394ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLOCK'
+  Clock period: 5.628ns (frequency: 177.683MHz)
+  Total number of paths / destination ports: 194 / 13
+-------------------------------------------------------------------------
+Delay:               5.628ns (Levels of Logic = 4)
+  Source:            SUM_3 (FF)
+  Destination:       R_1 (FF)
+  Source Clock:      CLOCK rising
+  Destination Clock: CLOCK rising
+
+  Data Path: SUM_3 to R_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              9   0.591   0.855  SUM_3 (SUM_3)
+     LUT3_D:I2->O          1   0.704   0.499  R_mux0000<1>21_SW0 (N35)
+     LUT4_D:I1->LO         1   0.704   0.104  R_mux0000<1>21 (N62)
+     LUT4:I3->O            1   0.704   0.455  R_mux0000<1>4 (R_mux0000<1>4)
+     LUT4:I2->O            1   0.704   0.000  R_mux0000<1>18 (R_mux0000<1>)
+     FDE:D                     0.308          R_1
+    ----------------------------------------
+    Total                      5.628ns (3.715ns logic, 1.913ns route)
+                                       (66.0% logic, 34.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLOCK'
+  Total number of paths / destination ports: 60 / 22
+-------------------------------------------------------------------------
+Offset:              7.169ns (Levels of Logic = 6)
+  Source:            C<1> (PAD)
+  Destination:       SUM_1 (FF)
+  Destination Clock: CLOCK rising
+
+  Data Path: C<1> to SUM_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.218   0.712  C_1_IBUF (C_1_IBUF)
+     LUT3:I1->O            6   0.704   0.844  SUM_mux0000<0>3_SW0 (N21)
+     LUT4:I0->O            1   0.704   0.499  CURR_STATE_cmp_lt00001_SW3_G (N56)
+     LUT4:I1->O            1   0.704   0.000  SUM_mux0000<0>2_G (N58)
+     MUXF5:I1->O           2   0.321   0.451  SUM_mux0000<0>2 (N11)
+     LUT4:I3->O            1   0.704   0.000  SUM_mux0000<2> (SUM_mux0000<2>)
+     FDE:D                     0.308          SUM_1
+    ----------------------------------------
+    Total                      7.169ns (4.663ns logic, 2.506ns route)
+                                       (65.0% logic, 35.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLOCK'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.394ns (Levels of Logic = 1)
+  Source:            R_1 (FF)
+  Destination:       R<1> (PAD)
+  Source Clock:      CLOCK rising
+
+  Data Path: R_1 to R<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.591   0.531  R_1 (R_1)
+     OBUF:I->O                 3.272          R_1_OBUF (R<1>)
+    ----------------------------------------
+    Total                      4.394ns (3.863ns logic, 0.531ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.43 secs
+ 
+--> 
+
+Total memory usage is 359836 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

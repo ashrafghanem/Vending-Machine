@@ -1,0 +1,29 @@
+Command line:
+   VENDINGMACHINE_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  6459
+
+Fri Dec 01 16:39:59 2017
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 1038.14 Meg
+
+ Total Signals          : 11
+ Total Nets             : 17
+ Total Signal Drivers   : 6
+ Total Blocks           : 3
+ Total Primitive Blocks : 3
+ Total Processes        : 2
+ Total Traceable Variables  : 10
+ Total Scalar Nets and Variables : 395
+Total Line Count : 34
+
+ Total Simulation Time: 0.046875 sec
+
+ Current Memory Usage: 1038.14 Meg
+
+Fri Dec 01 16:40:02 2017
+
